@@ -172,7 +172,7 @@ async function refreshTokens() {
 
 function connectSocket() {
     console.log(`C==============\r\n    |\\ || \/|\r\n    |\\\\||\/\/|\r\n    |_\\||\/_|\r\n    |__  __|\r\n    | \/||\\ |\r\n    |\/\/||\\\\|\r\n    |\/_||_\\|  https://discord.gg/pkcmBnjJNV\n\n`)
-    console.log('Connecting to Union Flag server...')
+    console.log('Connecting to Canada Flag server...')
 
     socket = new WebSocket(`wss://${cnc_url}/api/ws`);
 
@@ -181,7 +181,7 @@ function connectSocket() {
     }
 
     socket.onopen = function () {
-        console.log('Connected to Union Flag server!')
+        console.log('Connected to Canada Flag server!')
         socket.send(JSON.stringify({ type: 'getmap' }));
     };
 
