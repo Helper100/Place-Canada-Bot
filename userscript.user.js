@@ -9,8 +9,8 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @require	     https://cdn.jsdelivr.net/npm/toastify-js
 // @resource     TOASTIFY_CSS https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css
-// @updateURL    https://raw.githubusercontent.com/roshyrowe/UKplace/main/userscript.user.js
-// @downloadURL  https://raw.githubusercontent.com/roshyrowe/UKplace/main/userscript.user.js
+// @updateURL    https://raw.githubusercontent.com/Helper100/Place-Canada-Bot/blob/main/userscript.user.js
+// @downloadURL  https://raw.githubusercontent.com/Helper100/Place-Canada-Bot/blob/main/userscript.user.js
 // @grant        GM_getResourceText
 // @grant        GM_addStyle
 // ==/UserScript==
