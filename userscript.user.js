@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Canada Flag Bot
-// @namespace    
+// @namespace
 // @version      14.0
-// @description  For Britannia!
-// @author       Union Flag Project
+// @description  Eh?
+// @author       Canada Place
 // @match        https://www.reddit.com/r/place/*
 // @match        https://new.reddit.com/r/place/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
@@ -21,7 +21,7 @@ var accessToken;
 var currentOrderCanvas = document.createElement('canvas');
 var currentOrderCtx = currentOrderCanvas.getContext('2d');
 var currentPlaceCanvas = document.createElement('canvas');
-var cnc_url = "flag.gowergeeks.com:1200"
+var cnc_url = "raw.github.com/Helper100/Place-Canada-Bot/blob/main/canadatemplate.png"
 
 // Global constants
 const DEFAULT_TOAST_DURATION_MS = 10000;
@@ -119,7 +119,7 @@ function connectSocket() {
         duration: DEFAULT_TOAST_DURATION_MS
     }).showToast();
 
-    socket = new WebSocket(`wss://${cnc_url}/api/ws`);
+    socket = new WebSocket(`wss://flag.gowergeeks.com:1200/api/ws`);
 
     socket.onopen = function () {
         Toastify({
@@ -144,7 +144,7 @@ function connectSocket() {
                     text: `New map loaded (Reason: ${data.reason ? data.reason : 'connected to server'})...`,
                     duration: DEFAULT_TOAST_DURATION_MS
                 }).showToast();
-                currentOrderCtx = await getCanvasFromUrl(`https://${cnc_url}/maps/${data.data}`, currentOrderCanvas, 0, 0, true);
+                currentOrderCtx = await getCanvasFromUrl(`https://${cnc_url}`, currentOrderCanvas, 0, 0, true);
                 order = getRealWork(currentOrderCtx.getImageData(0, 0, 2000, 2000).data);
                 Toastify({
                     text: `New map loaded, ${order.length} pixels in total`,
