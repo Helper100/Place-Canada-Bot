@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Union Flag Bot
+// @name         Canada Flag Bot
 // @namespace    
 // @version      14.0
 // @description  For Britannia!
@@ -115,7 +115,7 @@ let getPendingWork = (work, rgbaOrder, rgbaCanvas) => {
 
 function connectSocket() {
     Toastify({
-        text: 'Connecting to Union Flag server...',
+        text: 'Connecting to Canada Flag server...',
         duration: DEFAULT_TOAST_DURATION_MS
     }).showToast();
 
@@ -165,7 +165,7 @@ function connectSocket() {
 
     socket.onclose = function (e) {
         Toastify({
-            text: `Unoin Flag Server Disconnected: ${e.reason}`,
+            text: `Canada Flag Server Disconnected: ${e.reason}`,
             duration: DEFAULT_TOAST_DURATION_MS
         }).showToast();
         console.error('Socket timeout: ', e.reason);
